@@ -120,7 +120,7 @@ namespace BlogPessoal.src.repositorios.implementacoes
                         .Include(p => p.Criador)
                         .Where(p =>
                             p.Tema.Descricao.Contains(descricaoTema) &
-                            p.Criador.Nome ==emailCriador)
+                            p.Criador.Email ==emailCriador)
                         .ToListAsync();
 
                 case (_, null, _):
